@@ -1,0 +1,149 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --bg-dark-blue: hsl(217, 54%, 11%);
+  --card-dark-blue: hsl(216, 50%, 16%);
+  --line-dark-blue: hsl(215, 32%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--bg-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+}
+
+main {
+  background-color: var(--card-dark-blue);
+  width: 320px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.card-text {
+  margin: 15px 0 0 0;
+}
+
+.card-text h1 {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.card-text h1:hover,
+.avatar span:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+h1 + p {
+  font-weight: 300;
+  color: var(--soft-blue);
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  width: auto;
+}
+
+.overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: hsla(178, 100%, 60%, 0.65);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.eye {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-wrapper:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 20px;
+  object-fit: contain;
+  margin-right: 3px;
+  height: 50%;
+}
+
+.price p {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.price p:first-child {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.price p:nth-child(2) {
+  color: var(--soft-blue);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--line-dark-blue);
+  margin: 15px 0;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar img {
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.avatar p {
+  color: var(--soft-blue);
+  font-size: 1.05rem;
+}
+
+.avatar span {
+  color: white;
+}

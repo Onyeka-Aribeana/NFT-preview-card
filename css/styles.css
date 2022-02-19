@@ -13,38 +13,41 @@
 }
 
 body {
-  font-size: 18px;
+  font-size: 1rem;
   font-family: "Outfit", sans-serif;
   background-color: var(--bg-dark-blue);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 2rem;
 }
 
 main {
   background-color: var(--card-dark-blue);
-  width: 320px;
+  width: 20rem;
   border-radius: 10px;
-  padding: 20px;
+  padding: 1.2rem;
 }
 .card-text {
   margin: 15px 0 0 0;
 }
 
 .card-text h1 {
-  color: white;
-  font-weight: 600;
-  font-size: 24px;
   margin: 20px 0;
 }
 
-.card-text h1:hover,
-.avatar span:hover {
+.card-text h1>a{
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.card-text h1>a:hover,
+#jules:hover {
   color: var(--cyan);
-  cursor: pointer;
 }
 
 h1 + p {
@@ -100,7 +103,7 @@ h1 + p {
 }
 
 .icon {
-  width: 20px;
+  width: 1.2rem;
   object-fit: contain;
   margin-right: 3px;
   height: 50%;
@@ -121,7 +124,7 @@ h1 + p {
   color: var(--soft-blue);
 }
 
-hr {
+.line {
   border: 0;
   border-top: 1px solid var(--line-dark-blue);
   margin: 15px 0;
@@ -144,6 +147,7 @@ hr {
   font-size: 1.05rem;
 }
 
-.avatar span {
+#jules{
   color: white;
+  text-decoration: none;
 }
